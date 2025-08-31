@@ -1,6 +1,6 @@
-# Kubik 3D Game
+# Kubik 2D Game
 
-This is a full-stack 3D Kubik (3D Tetris-like) game built with Python Flask and Three.js.
+This is a full-stack 2D Kubik (2D Tetris-like) game built with Python Flask and Three.js.
 
 ## Setup
 
@@ -11,7 +11,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Open `http://127.0.0.1:5000` in a browser.
+Open the local host address in a browser.
 
 ## Structure
 
