@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Tetris</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1e90ff, #87cefa);
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        #playfield {
+            border: 5px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
+        }
+        #score, #lines {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Classic Tetris</h1>
+    <button id="startBtn">Start Game</button>
+    <!-- Playfield container (300×300) -->
+    <div id="playfield" style="position:relative; width:300px; height:300px; 
+        margin:0 auto;">
+        <canvas id="gameCanvas" width="300" height="300"></canvas>
+        <!-- Overlay for win/lose message, covers only canvas -->
+        <div id="message" style="display:none; position:absolute; top:0; left:0; 
+        width:100%; height:100%; 
+        background:rgba(0,0,0,0.8); color:white; 
+        font-size:2em; z-index:10;"></div>
+    </div>
+    <div>Score: <span id="score">0</span> Lines: 
+        <span id="lines">0</span></div>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="{{ url_for('static', filename='audio/background.mp3') }}" 
+        type="audio/mpeg">
+    </audio>
+    <script src="{{ url_for('static', filename='js/tetris.js') }}"></script>
+</body>
+</html>

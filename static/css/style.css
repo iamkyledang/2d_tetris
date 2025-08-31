@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0; }
+#game-container { width: 600px; height: 600px; margin: 0 auto; 
+    background: #f0f0f0; border: 2px solid #f0f0f0; }
+/* Playfield background */
+#playfield { background-color: #f0f0f0; }
